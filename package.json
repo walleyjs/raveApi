@@ -10,6 +10,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "connect-multiparty": "^2.1.1",
+    "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "flutterwave": "^2.2.8",
