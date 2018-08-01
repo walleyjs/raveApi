@@ -1,7 +1,6 @@
 {
   "name": "raveapi",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +18,15 @@
     "nodemon": "^1.18.3",
     "request": "^2.87.0",
     "unirest": "^0.5.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walleyjs/raveApi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/walleyjs/raveApi/issues"
+  },
+  "homepage": "https://github.com/walleyjs/raveApi#readme",
+  "description": ""
 }
