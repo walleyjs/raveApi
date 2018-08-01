@@ -12,6 +12,7 @@ app.set("view engine","ejs");
 app.set("views","views");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + "/public"));
 require('dotenv').config({ path: 'variables.env' });
 var apiKey = "FLWPUBK-02ad06ed9671c20dc78057a1d72ddb33-X";
 var seckey = "FLWSECK-06da147416f0a6788c422ed2acec5016-X";
@@ -43,15 +44,6 @@ app.post("/post", function (req, res) {
         currency: currency,
         ref: ref   
     };
-    // unirest.post('https://ravesandboxapi.flutterwave.com/v2/gpx/transfers/create')
-	// .headers({'Content-Type': 'application/json', 'SEC KEY': "FLWSECK-06da147416f0a6788c422ed2acec5016-X"})
-	// .send(makeTransfer)
-	// .end(function (response) {
-	// 	payRes = response.body;
-    //     console.log(response.body);
-    //     res.redirect("/");
-    // });
-    // var json_obj = JSON.parse(makeTransfer);
     console.log(makeTransfer);
     var options = { method: 'POST',
   url: 'https://ravesandboxapi.flutterwave.com/v2/gpx/transfers/create',
@@ -78,7 +70,8 @@ app.get("/receipt",function (req,res) {
 request('https://ravesandboxapi.flutterwave.com/v2/gpx/transfers',options, function (error, response, body) {
   if (error) throw new Error(error);
     var parseData=JSON.parse(body);
-  console.log(parseData["data"]["transfers"]);
+    // console.log("=========="+body[1]);
+//   console.log(parseData["data"]["transfers"]);
     var content = parseData["data"]["transfers"];
   res.render("receipt",{
       content: content

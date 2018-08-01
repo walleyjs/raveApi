@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-    <form action="/post" method="POST">
-    <input type="number" name="account_number" value="" placeholder="accpunt num">
-    <input type="text" name="narration" value="" placeholder="naration" >
-        <select name="account_bank" >
-            <option>select your bank</option>
-            <%body.data.forEach(function(data){%>
-            <option value="<%=data.code%>" id="bankcode"><%=data.name%></option>
-            <%})%>
-            </select>
-            <input type="number" name="amount" value="" placeholder="amount">
-            <button >submit</button>
-    </form>
-            
-    </body>
-</html>
+<%include partials/header%>
+<div id="formcontainer">
+    <div id="formcont">
+        <h1 class="formheader">TRANSFER MONEY</h1>
+        <ul id="form">
+            <form action="/post" method="POST">
+                <li><select name="account_bank" class="input input1" >
+                    <option>select your bank</option>
+                <%body.data.forEach(function(data){%>
+                    <option value="<%=data.code%>" id="bankcode"><%=data.name%></option>
+                <%})%>
+                </select></li>
+                <li><input type="number" name="account_number" value="" class="input input2" placeholder="accpunt num"></li>
+                <li><input type="number" name="amount" value="" placeholder="amount" class="input input4"></li>
+                <textarea rows="" cols="" name="narration" value="" placeholder="naration" class="input input4" ></textarea></li>
+                <li><button class="input input3" >submit</button></li>
+            </form>
+        </ul>
+    </div>
+</div>
+<%include partials/footer%>
+    

@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.formheader {
+    text-align: center;
+}
+
+#formcontainer {
+    display: flex;
+    justify-content: center;
+}
+
+#formcont {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+li{
+    list-style: none;
+}
+
+.input {
+    width: 400px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 3px;
+    margin-top: 10px;
+    border-color: #9e9e9e8a;
+    border-radius: 5px;
+}
+
+.input3 {
+    background-color: #095a9bfc;
+    color: white;
+    font-size: 20px;
+}
+
+li a {
+    color: #095a9bfc;
+}
