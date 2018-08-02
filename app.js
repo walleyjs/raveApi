@@ -71,8 +71,9 @@ request('https://ravesandboxapi.flutterwave.com/v2/gpx/transfers',options, funct
   if (error) throw new Error(error);
     var parseData=JSON.parse(body);
     // console.log("=========="+body[1]);
-//   console.log(parseData["data"]["transfers"]);
+  console.log(parseData["data"]["transfers"]);
     var content = parseData["data"]["transfers"];
+    console.log(content);
   res.render("receipt",{
       content: content
   });
