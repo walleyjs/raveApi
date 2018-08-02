@@ -1,6 +1,38 @@
+
 *{
     padding: 0px;
     margin: 0px;
+}
+#top{
+padding: 0px 0px 50px 0px;
+}
+#headercont{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #666;
+    height: 40px;
+    /* padding-top: 10px; */
+    /* flex-wrap: wrap; */
+    padding-right: 40px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+    
+}
+.header{
+    margin-left: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    border-left:solid white thin;
+    /* border-left: 20px thin black; */
+    align-self: center;
+    flex-wrap: wrap;
+    line-height: 35px;
+    
 }
 .formheader {
     text-align: center;
@@ -43,8 +75,8 @@ li a {
 #mainreceipt {
     display: flex;
     width: 100%;
-        margin: 10px 0px 0px 0px;
-    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0px 20px 0px;
     flex-direction: row;
     justify-content: center;
    
@@ -69,5 +101,4 @@ li a {
 .content{
     /* display: flex; */
     padding: 5px 5px 5px 10px;
-
 }

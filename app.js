@@ -66,11 +66,9 @@ app.get("/receipt",function (req,res) {
   qs: {seckey:'FLWSECK-06da147416f0a6788c422ed2acec5016-X'},
   headers: { 'content-type': 'application/json' }
 };
-
 request('https://ravesandboxapi.flutterwave.com/v2/gpx/transfers',options, function (error, response, body) {
   if (error) throw new Error(error);
     var parseData=JSON.parse(body);
-    // console.log("=========="+body[1]);
   console.log(parseData["data"]["transfers"]);
     var content = parseData["data"]["transfers"];
     console.log(content);
@@ -79,6 +77,26 @@ request('https://ravesandboxapi.flutterwave.com/v2/gpx/transfers',options, funct
   });
 
 });
+});
+app.get("/transaction", function (req, res) {
+    var options = {
+        qs: {
+            seckey: 'FLWSECK-06da147416f0a6788c422ed2acec5016-X'
+        },
+        headers: {
+            'content-type': 'application/json'
+        }
+    };
+    request('https://ravesandboxapi.flutterwave.com/v2/gpx/transfers', options, function (error, response, body) {
+        if (error) throw new Error(error);
+        var parseData = JSON.parse(body);
+        var content = parseData["data"]["transfers"];
+        console.log(content);
+        res.render("transaction", {
+            content: content
+        });
+
+    });
 });
 
 var server =app.listen(app.get("port"),function () {

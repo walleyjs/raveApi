@@ -1,0 +1,22 @@
+<%include partials/header%>
+
+<%content.forEach(function(content){%>
+    <div id="mainreceipt">
+    <div class="receipt">
+    <div class="input3 head">
+        
+    </div>
+     <div class="content">
+       <h2>TRANSACTION STATUS:<%=content.complete_message%> </h2> 
+       <h2>ACCOUNT NAME:<%=content.fullname%></h2>
+        <h2>ACCOUNT NUMBER:<%=content.account_number%></h2>
+        <h2>BANK NAME:<%=content.bank_name%></h2>        
+        <h2>AMOUNT:#<%=content.amount%></h2>
+        <h2>NARRATION:<%=content.narration%></h2>
+        <h2>DATE:<%=content.date_created.substring(0, 10)%></h2>
+    </div>
+</div>
+</div>
+<%})%>
+
+<%include partials/footer%>

@@ -5,14 +5,14 @@
     <h2>INVOICE OF YOUR TRANSACTION</h2>
 </div>
      <div class="content">
-       <h2>TRANSACTION STATUS: <%=content[0].status%></h2> 
-        <h2>ACCOUNT NAME:<%=content[0].fullname%></h2>
+       <h2>TRANSACTION STATUS:<%=content[0].complete_message%> </h2> 
+       <h2>ACCOUNT NAME:<%=content[0].fullname%></h2>
         <h2>ACCOUNT NUMBER:<%=content[0].account_number%></h2>
         <h2>BANK NAME:<%=content[0].bank_name%></h2>        
         <h2>AMOUNT:#<%=content[0].amount%></h2>
         <h2>NARRATION:<%=content[0].narration%></h2>
+        <h2>DATE:<%=content[0].date_created.substring(0, 10)%></h2>
     </div>
-       
 </div>
 </div>
 
